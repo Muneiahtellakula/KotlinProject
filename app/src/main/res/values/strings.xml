@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MyKotlinTuto</string>
+    <string name="name">Muneiah Tellakula</string>
+    <string name="bio">Hi, my name is Muneiah
+        <b>\nWork Experience:</b>
+\n\nHave been working with APSSDC Since Four years plus
+\nCertified By GOOGLE as Associative Android Developer
+\nCertified By UDACITY as Android Developer
+\nReceived Android Developer Nano Degree from UDACITY
+           <b>\nSkill set</b>
+   \n\t\t\t\t\tAndroid
+   \n\t\t\t\t\tProficient in  Python ,PHP,Java,MIT App Inventor,Raptor,Scratch
+   \nGuided Students  some Real Time Projects
+   \nHave Trained over hundred of students on their  nano  degree
+   \nLead a team and trained over 2000 students d uring on python program
+           <b>\n\nContact details</b>
+     \n\t\tGithub:https://github.com/Muneiahtellakula
+     \n\t\tMobile:+91 9849161938
+     \n\t\tEmail:muneiahtellakula@gmail.com or muneiah.t@apssdc.in
+.\n</string>
+</resources>
