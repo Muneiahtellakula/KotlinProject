@@ -1,26 +1,33 @@
 package com.muni.mykotlintuto
 
+import android.graphics.drawable.Animatable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var animatable: Animatable
     companion object {
         val log = Logger.getLogger(MainActivity::class.java.name)
     }
     var recyclerView: RecyclerView? = null
+    var startButton1:Button?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         recyclerView=findViewById(R.id.recycler_main_actvity)
+        startButton1=findViewById(R.id.startButton)
+        animatable = animatedImageView.drawable as Animatable
         var adapter = MainActivityAdapter(generateData())
         val layoutManager = LinearLayoutManager(applicationContext)
         recyclerView?.layoutManager = layoutManager
@@ -57,11 +64,20 @@ class MainActivity : AppCompatActivity() {
                     .show()
                return true
             }
+            R.id.animator -> {
+                animatable = animatedImageView.drawable as Animatable
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
     override fun onStart() {
         super.onStart()
+
+            startButton.setOnClickListener {
+                animatable.start()
+
+        }
         log.info("onStart Called")
         Toast.makeText(this,"onStart Called",Toast.LENGTH_LONG).show()
     }
