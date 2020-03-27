@@ -9,9 +9,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        val log = Logger.getLogger(MainActivity::class.java.name)
+    }
     var recyclerView: RecyclerView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -54,5 +59,41 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+    override fun onStart() {
+        super.onStart()
+        log.info("onStart Called")
+        Toast.makeText(this,"onStart Called",Toast.LENGTH_LONG).show()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        log.info("OnRestart Called")
+        Toast.makeText(this,"OnRestart Called",Toast.LENGTH_LONG).show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        log.info("OnResume Called")
+        Toast.makeText(this,"OnResume Called",Toast.LENGTH_LONG).show()
+    }
+
+
+    override fun onStop() {
+        super.onStop()
+        log.info("OnStop Called")
+        Toast.makeText(this,"OnStop Called",Toast.LENGTH_LONG).show()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        log.info("OnPause Called")
+        Toast.makeText(this,"OnPause Called",Toast.LENGTH_LONG).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        log.info("OnDestroy Called")
+        Toast.makeText(this,"OnDestroy Called",Toast.LENGTH_LONG).show()
     }
 }

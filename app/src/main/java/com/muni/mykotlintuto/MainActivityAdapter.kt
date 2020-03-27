@@ -4,6 +4,7 @@ import android.view.LayoutInflater.*
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 class MainActivityAdapter(private var items: ArrayList<UserDto>): RecyclerView.Adapter<MainActivityAdapter.ViewHolder>() {
 
@@ -25,8 +26,9 @@ class MainActivityAdapter(private var items: ArrayList<UserDto>): RecyclerView.A
         var userDto = items[position]
         holder?.txtName?.text = userDto.name
         holder?.txtComment?.text = userDto.comment
+
     }
-    class ViewHolder(row: View) : RecyclerView.ViewHolder(row) {
+    class ViewHolder(row: View) : RecyclerView.ViewHolder(row)  {
         var txtName: TextView? = null
         var txtComment: TextView? = null
 
