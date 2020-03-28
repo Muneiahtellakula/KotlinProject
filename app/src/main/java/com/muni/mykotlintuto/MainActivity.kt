@@ -1,10 +1,12 @@
 package com.muni.mykotlintuto
 
+import android.content.Intent
 import android.graphics.drawable.Animatable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -28,13 +30,17 @@ class MainActivity : AppCompatActivity() {
         recyclerView=findViewById(R.id.recycler_main_actvity)
         startButton1=findViewById(R.id.startButton)
         animatable = animatedImageView.drawable as Animatable
+        animatable.start()
+
         var adapter = MainActivityAdapter(generateData())
-        val layoutManager = LinearLayoutManager(applicationContext)
+        val layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.HORIZONTAL,false)
         recyclerView?.layoutManager = layoutManager
         recyclerView?.itemAnimator = DefaultItemAnimator()
 
+       // recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
         recyclerView?.adapter = adapter
         adapter.notifyDataSetChanged()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -73,7 +79,6 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onStart() {
         super.onStart()
-
             startButton.setOnClickListener {
                 animatable.start()
 
@@ -81,8 +86,8 @@ class MainActivity : AppCompatActivity() {
         log.info("onStart Called")
         Toast.makeText(this,"onStart Called",Toast.LENGTH_LONG).show()
     }
-
-    override fun onRestart() {
+/* Activity Life cycles*/
+   /* override fun onRestart() {
         super.onRestart()
         log.info("OnRestart Called")
         Toast.makeText(this,"OnRestart Called",Toast.LENGTH_LONG).show()
@@ -111,5 +116,12 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         log.info("OnDestroy Called")
         Toast.makeText(this,"OnDestroy Called",Toast.LENGTH_LONG).show()
+    }*/
+/*for navigate the Fingerprint Activity Screen*/
+    fun openFingerPrintActivity(view: View) {
+        val intent=Intent(this,FingerPrintActivity::class.java)
+        startActivity(intent)
     }
+
+
 }

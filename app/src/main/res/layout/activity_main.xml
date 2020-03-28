@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,6 +25,7 @@
           android:layout_weight="1"
         android:layout_height="wrap_content"
         android:src="@drawable/heart_beat_anim"
+
        />
 
     <Button
@@ -29,14 +33,35 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="Click Me"
-        android:background="#fff"
+        android:background="@drawable/boarder_design"
         android:layout_gravity="center"
+
         android:id="@+id/startButton"
         />
     </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recyclerview Horizaontal Scroll"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="5dp"/>
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="5dp"
+        android:background="@drawable/boarder_design"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recycler_main_actvity"/>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boarder_design"
+        />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="openFingerPrintActivity"
+    android:background="@drawable/boarder_design"
+    android:text="Finger Print"/>
 </LinearLayout>
+</ScrollView>

@@ -11,7 +11,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splish)
         Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, FingerPrintActivity::class.java)
             startActivity(intent)
         }, 3000)
     }
