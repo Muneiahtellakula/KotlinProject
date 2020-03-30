@@ -128,5 +128,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(i)
     }
 
+    fun gameActivity(view: View) {
+        val game=Intent(this,GameActivity::class.java)
+        startActivity(game)
+    }
+
 
 }

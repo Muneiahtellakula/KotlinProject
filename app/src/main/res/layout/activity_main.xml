@@ -47,7 +47,7 @@
         android:textColor="@color/colorPrimary"
         android:layout_margin="5dp"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_margin="5dp"
+        android:layout_margin="2dp"
         android:background="@drawable/boarder_design"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         />
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 <Button
     android:layout_margin="5dp"
@@ -75,6 +75,15 @@
         android:onClick="openCirculartActivity"
         android:background="@drawable/boarder_design"
         android:text="circular Reveals"/>
+
+
     </LinearLayout>
+    <Button
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="gameActivity"
+        android:background="@drawable/boarder_design"
+        android:text="Rock Paper Scissors Game"/>
 </LinearLayout>
 </ScrollView>
