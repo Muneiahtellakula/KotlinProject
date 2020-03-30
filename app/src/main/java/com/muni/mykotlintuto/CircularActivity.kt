@@ -11,7 +11,10 @@ import android.view.ViewAnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
+import android.view.Gravity
+import android.widget.LinearLayout
 import android.widget.Toast
+import kotlinx.android.synthetic.main.about_me.*
 import kotlinx.android.synthetic.main.activity_circular.*
 import kotlin.math.hypot
 
@@ -23,6 +26,7 @@ class CircularActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_circular)
+
         floating_button.setOnClickListener {
             revealMenu()
         }
@@ -86,6 +90,12 @@ class CircularActivity : AppCompatActivity() {
     }
 
     fun bt_one_Event(view: View) {
+        val layout = layoutInflater.inflate(R.layout.about_me,linearlayout)
+        val myToast = Toast(applicationContext)
+        myToast.duration = Toast.LENGTH_LONG
+        myToast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
+        myToast.view = layout//setting the view of custom toast layout
+        myToast.show()
         Toast.makeText(this,"Hi",Toast.LENGTH_SHORT).show()
     }
     fun bt_2_Event(view: View) {
