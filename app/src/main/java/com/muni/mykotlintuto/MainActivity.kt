@@ -123,5 +123,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun openCirculartActivity(view: View) {
+        val i=Intent(this,CircularActivity::class.java)
+        startActivity(i)
+    }
+
 
 }

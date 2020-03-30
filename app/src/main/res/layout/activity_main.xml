@@ -57,11 +57,24 @@
         android:layout_height="wrap_content"
         android:background="@drawable/boarder_design"
         />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 <Button
+    android:layout_margin="5dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:onClick="openFingerPrintActivity"
     android:background="@drawable/boarder_design"
     android:text="Finger Print"/>
+    <Button
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openCirculartActivity"
+        android:background="@drawable/boarder_design"
+        android:text="circular Reveals"/>
+    </LinearLayout>
 </LinearLayout>
 </ScrollView>
