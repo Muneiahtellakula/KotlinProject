@@ -2,6 +2,7 @@ package com.muni.mykotlintuto
 
 import android.content.Intent
 import android.graphics.drawable.Animatable
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -131,6 +132,12 @@ class MainActivity : AppCompatActivity() {
     fun gameActivity(view: View) {
         val game=Intent(this,GameActivity::class.java)
         startActivity(game)
+    }
+
+    fun showWebPage(view: View) {
+        /*Implicity Intent Syntax .For Navigateexternal App Screen using this implicit intet */
+        val implicitIntent= Intent(Intent.ACTION_VIEW, Uri.parse("http://www.goolge.com"))
+        startActivity(implicitIntent)
     }
 
 
