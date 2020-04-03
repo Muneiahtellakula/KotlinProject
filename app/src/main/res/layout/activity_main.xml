@@ -95,5 +95,13 @@
         android:onClick="gameActivity"
         android:background="@drawable/boarder_design"
         android:text="Rock Paper Scissors Game"/>
+    <Button
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="flexyLayoutActivity"
+        android:background="@drawable/boarder_design"
+        android:text="Flex Box Layout test"/>
+
 </LinearLayout>
 </ScrollView>

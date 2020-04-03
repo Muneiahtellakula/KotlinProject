@@ -3,7 +3,7 @@
     package="com.muni.mykotlintuto">
 
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,12 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".FlexyLayoutActivity"></activity>
         <activity android:name=".ImplicitIntentActivity">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="http"/>
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".GameActivity" />
         <activity android:name=".CircularActivity" />

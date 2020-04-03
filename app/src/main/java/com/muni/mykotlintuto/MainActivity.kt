@@ -140,5 +140,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(implicitIntent)
     }
 
+    fun flexyLayoutActivity(view: View) {
+        val flx=Intent(this,FlexyLayoutActivity::class.java)
+        startActivity(flx)
+
+    }
 
 }
