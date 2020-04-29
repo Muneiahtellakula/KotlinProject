@@ -14,7 +14,7 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:orientation="horizontal"
         android:weightSum="2"
 >
@@ -50,7 +50,7 @@
         android:layout_margin="2dp"
         android:background="@drawable/boarder_design"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:id="@+id/recycler_main_actvity"/>
     <View
         android:layout_width="match_parent"
@@ -102,6 +102,7 @@
         android:onClick="flexyLayoutActivity"
         android:background="@drawable/boarder_design"
         android:text="Flex Box Layout test"/>
+
 
 </LinearLayout>
 </ScrollView>
